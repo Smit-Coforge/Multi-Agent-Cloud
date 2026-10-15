@@ -24,7 +24,7 @@ REQUIRED = (
     "vehicle_make",
     "vehicle_model",
     "annual_mileage",
-    "coverage_level",
+    "coverage_level",   
     "violations_disclosed",
     "accidents_disclosed",
 )
