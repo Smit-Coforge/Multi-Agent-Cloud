@@ -1,0 +1,13 @@
+{
+  "name": "Denise Okonkwo",
+  "age": 36,
+  "zip_code": "75201",
+  "years_licensed": 15,
+  "vehicle_year": 2017,
+  "vehicle_make": "Mazda",
+  "vehicle_model": "3",
+  "annual_mileage": 10000,
+  "coverage_level": "liability",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

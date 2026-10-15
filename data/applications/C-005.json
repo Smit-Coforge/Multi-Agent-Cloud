@@ -1,0 +1,13 @@
+{
+  "name": "Riley Chen",
+  "age": 29,
+  "zip_code": "80205",
+  "years_licensed": 11,
+  "vehicle_year": 2021,
+  "vehicle_make": "Subaru",
+  "vehicle_model": "Outback",
+  "annual_mileage": 10000,
+  "coverage_level": "full",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

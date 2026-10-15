@@ -1,0 +1,16 @@
+{
+  "name": "Morgan Ellis",
+  "age": 24,
+  "zip_code": "80202",
+  "years_licensed": 9,
+  "vehicle_year": 2016,
+  "vehicle_make": "Honda",
+  "vehicle_model": "Civic",
+  "annual_mileage": 21000,
+  "coverage_level": "liability",
+  "violations_disclosed": [
+    "speeding"
+  ],
+  "accidents_disclosed": 0,
+  "driving_record_text": "One speeding ticket. Please confirm the license date; the years licensed may be off by one."
+}

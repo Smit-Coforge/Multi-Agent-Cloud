@@ -1,0 +1,22 @@
+{
+  "mvr": {
+    "violations": [],
+    "at_fault_accidents": 0,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [],
+    "notes": "No claims on file."
+  },
+  "vehicle_record": {
+    "year": 2020,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "garaging_zip": "30301"
+  },
+  "territory": {
+    "zip_code": "30301",
+    "risk_band": "low",
+    "notes": "Ordinary zip."
+  }
+}

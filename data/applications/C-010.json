@@ -1,0 +1,14 @@
+{
+  "name": "Evan Brooks",
+  "age": 36,
+  "zip_code": "85001",
+  "years_licensed": 14,
+  "vehicle_year": 2018,
+  "vehicle_make": "Chevrolet",
+  "vehicle_model": "Malibu",
+  "annual_mileage": 12000,
+  "coverage_level": "full",
+  "violations_disclosed": [],
+  "accidents_disclosed": 1,
+  "driving_record_text": "speeding ticket and a fender bender"
+}

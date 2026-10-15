@@ -1,0 +1,24 @@
+{
+  "mvr": {
+    "violations": [
+      "speeding"
+    ],
+    "at_fault_accidents": 0,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [],
+    "notes": "No claims on file."
+  },
+  "vehicle_record": {
+    "year": 2017,
+    "make": "Mazda",
+    "model": "3",
+    "garaging_zip": "75201"
+  },
+  "territory": {
+    "zip_code": "75201",
+    "risk_band": "low",
+    "notes": "Low-risk zip."
+  }
+}

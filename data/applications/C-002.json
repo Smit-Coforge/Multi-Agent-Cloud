@@ -1,0 +1,16 @@
+{
+  "name": "Jordan Blake",
+  "age": 22,
+  "zip_code": "48201",
+  "years_licensed": 4,
+  "vehicle_year": 2015,
+  "vehicle_make": "Dodge",
+  "vehicle_model": "Charger",
+  "annual_mileage": 18000,
+  "coverage_level": "full",
+  "violations_disclosed": [
+    "dui",
+    "speeding"
+  ],
+  "accidents_disclosed": 2
+}

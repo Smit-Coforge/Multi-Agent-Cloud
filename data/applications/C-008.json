@@ -1,0 +1,13 @@
+{
+  "name": "Helen Park",
+  "age": 20,
+  "zip_code": "98101",
+  "years_licensed": 10,
+  "vehicle_year": 2008,
+  "vehicle_make": "Toyota",
+  "vehicle_model": "Corolla",
+  "annual_mileage": 6000,
+  "coverage_level": "full",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

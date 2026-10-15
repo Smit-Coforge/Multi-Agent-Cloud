@@ -1,0 +1,13 @@
+{
+  "name": "Casey Morgan",
+  "age": 41,
+  "zip_code": "60614",
+  "years_licensed": 20,
+  "vehicle_year": 2018,
+  "vehicle_make": "Toyota",
+  "vehicle_model": "Camry",
+  "annual_mileage": 9000,
+  "coverage_level": "liability",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

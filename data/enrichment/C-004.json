@@ -1,0 +1,24 @@
+{
+  "mvr": {
+    "violations": [
+      "speeding"
+    ],
+    "at_fault_accidents": 0,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [],
+    "notes": "No claims on file."
+  },
+  "vehicle_record": {
+    "year": 2016,
+    "make": "Nissan",
+    "model": "Altima",
+    "garaging_zip": "10001"
+  },
+  "territory": {
+    "zip_code": "10001",
+    "risk_band": "medium",
+    "notes": "Dense city driving."
+  }
+}

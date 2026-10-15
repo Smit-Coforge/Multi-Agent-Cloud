@@ -1,0 +1,31 @@
+{
+  "mvr": {
+    "violations": [
+      "dui",
+      "speeding"
+    ],
+    "at_fault_accidents": 2,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [
+      {
+        "type": "collision",
+        "year": 2025,
+        "at_fault": true
+      }
+    ],
+    "notes": "Two at-fault collisions on file."
+  },
+  "vehicle_record": {
+    "year": 2015,
+    "make": "Dodge",
+    "model": "Charger",
+    "garaging_zip": "48201"
+  },
+  "territory": {
+    "zip_code": "48201",
+    "risk_band": "high",
+    "notes": "High theft and crash zip."
+  }
+}

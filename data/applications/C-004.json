@@ -1,0 +1,15 @@
+{
+  "name": "Samir Patel",
+  "age": 22,
+  "zip_code": "10001",
+  "years_licensed": 2,
+  "vehicle_year": 2016,
+  "vehicle_make": "Nissan",
+  "vehicle_model": "Altima",
+  "annual_mileage": 22000,
+  "coverage_level": "liability",
+  "violations_disclosed": [
+    "speeding"
+  ],
+  "accidents_disclosed": 0
+}

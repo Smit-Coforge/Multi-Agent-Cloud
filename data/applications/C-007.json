@@ -1,0 +1,13 @@
+{
+  "name": "Nora Alvarez",
+  "age": 23,
+  "zip_code": "30301",
+  "years_licensed": 5,
+  "vehicle_year": 2020,
+  "vehicle_make": "Hyundai",
+  "vehicle_model": "Elantra",
+  "annual_mileage": 26000,
+  "coverage_level": "liability",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

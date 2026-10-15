@@ -1,0 +1,30 @@
+{
+  "mvr": {
+    "violations": [
+      "speeding"
+    ],
+    "at_fault_accidents": 1,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [
+      {
+        "type": "collision",
+        "year": 2024,
+        "at_fault": true
+      }
+    ],
+    "notes": "One at-fault fender bender."
+  },
+  "vehicle_record": {
+    "year": 2018,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "garaging_zip": "85001"
+  },
+  "territory": {
+    "zip_code": "85001",
+    "risk_band": "low",
+    "notes": "Average claims zip."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Alex Rivera",
+  "age": 34,
+  "zip_code": "94110",
+  "years_licensed": 16,
+  "vehicle_year": 2019,
+  "vehicle_make": "Honda",
+  "vehicle_model": "Civic",
+  "annual_mileage": 8000,
+  "coverage_level": "full",
+  "violations_disclosed": [],
+  "accidents_disclosed": 0
+}

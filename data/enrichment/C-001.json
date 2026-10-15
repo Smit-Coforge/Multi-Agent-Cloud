@@ -1,0 +1,22 @@
+{
+  "mvr": {
+    "violations": [],
+    "at_fault_accidents": 0,
+    "license_status": "valid"
+  },
+  "claims_history": {
+    "claims": [],
+    "notes": "No claims on file."
+  },
+  "vehicle_record": {
+    "year": 2019,
+    "make": "Honda",
+    "model": "Civic",
+    "garaging_zip": "94110"
+  },
+  "territory": {
+    "zip_code": "94110",
+    "risk_band": "low",
+    "notes": "Quiet residential zip."
+  }
+}

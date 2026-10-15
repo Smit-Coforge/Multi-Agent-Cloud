@@ -1,0 +1,15 @@
+{
+  "name": "Harold Nguyen",
+  "age": 48,
+  "zip_code": "73301",
+  "years_licensed": 25,
+  "vehicle_year": 2014,
+  "vehicle_make": "Ford",
+  "vehicle_model": "F-150",
+  "annual_mileage": 11000,
+  "coverage_level": "full",
+  "violations_disclosed": [
+    "reckless"
+  ],
+  "accidents_disclosed": 1
+}

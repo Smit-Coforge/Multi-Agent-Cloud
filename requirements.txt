@@ -1,0 +1,5 @@
+pytest
+mypy
+ruff
+langgraph
+ollama
