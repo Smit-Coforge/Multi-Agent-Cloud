@@ -1,0 +1,34 @@
+{
+  "family": "risk-agent",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "executionRoleArn": "arn:aws:iam::123456789012:role/risk-agent-execution",
+  "taskRoleArn": "arn:aws:iam::123456789012:role/risk-agent-task",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  },
+  "containerDefinitions": [
+    {
+      "name": "risk-agent",
+      "image": "123456789012.dkr.ecr.us-east-1.amazonaws.com/risk-agent:latest",
+      "essential": true,
+      "environment": [
+        {
+          "name": "OLLAMA_HOST",
+          "value": "http://ollama.underwriting.internal:11434"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/risk-agent",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}
