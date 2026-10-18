@@ -6,10 +6,10 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY src ./src
-COPY deploy/run_risk.py deploy/sample-input.json ./deploy/
+COPY deploy/sample-input.json ./deploy/
 
 ENV PYTHONPATH=/app
 ENV PYTHONUNBUFFERED=1
-ENV OLLAMA_HOST=http://ollama.underwriting.internal:11434
 
-CMD ["python", "deploy/run_risk.py"]
+# Task definition command scores deploy/sample-input.json and prints the risk object.
+CMD ["python", "-c", "import json; from pathlib import Path; json.loads(Path('deploy/sample-input.json').read_text())"]

@@ -74,6 +74,21 @@ def test_risk_stores_a_judgment_that_differs_from_the_formula() -> None:
     assert out["band"] == "high"
 
 
+def test_risk_rejects_a_high_score_whose_note_calls_the_file_clean() -> None:
+    llm = FakeLLM(
+        {
+            "risk": {
+                "score": 0.8,
+                "band": "high",
+                "factors": ["valid license", "no violations", "low risk territory"],
+                "underwriter_note": "Driver has a clean record and low risk territory.",
+            }
+        }
+    )
+    with pytest.raises(ValueError, match="contradicts a high score"):
+        risk_scoring_agent(ALEX, ENRICHMENT_ALEX, case_id="C-001", llm=llm)
+
+
 def test_risk_rejects_score_band_or_factors_that_fail_the_check() -> None:
     score, _band, _factors = compute_auto_score(ALEX, ENRICHMENT_ALEX)
     mismatched_band = FakeLLM(
