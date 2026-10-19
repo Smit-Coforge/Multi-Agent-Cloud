@@ -4,7 +4,7 @@ This module scores how serious an auto insurance file is.
 Responsibilities:
 - Ask the model for a score, band, factors, and an underwriter note.
 - Reject a score outside 0 to 1, a band that does not match that score, or empty text.
-- Reject a factor that names a DUI when the file has none.
+- Reject a high score whose note calls the file clean, and a factor that names a DUI when the file has none.
 """
 
 from __future__ import annotations
@@ -20,10 +20,15 @@ RISK_SYSTEM = (
     "You are an auto insurance underwriter. Judge this driver and car as a whole. "
     "Return JSON only, with exactly these keys: score, band, factors, underwriter_note. "
     "score is a number from 0 to 1 that matches how serious this file is. "
+    "A clean file is not serious: valid license, no violations, no at-fault accidents, "
+    "no undisclosed items, a low-risk territory, and no surcharge. That file scores below 0.4. "
+    "Use a score above 0.7 only for a severe violation, an invalid or suspended license, "
+    "repeat at-fault accidents, or several serious debits together. "
     "band is low when score < 0.4, medium when score <= 0.7, and high otherwise. "
-    "Do not default to a low score. The note and the factors must agree with the score. "
     "factors is a non-empty list of short strings for facts that are actually on this file. "
     "Do not name a violation the file does not contain. "
+    "The note and the factors must describe the same seriousness as the score. "
+    "A note that calls the record clean or low risk uses a low score, never a high score. "
     "underwriter_note is one short sentence. "
     "Weigh age, years licensed, mileage, vehicle, territory, violations, "
     "at-fault accidents, undisclosed record items, license status, and the rate assessment. "
@@ -32,6 +37,7 @@ RISK_SYSTEM = (
 )
 
 _DUI = re.compile(r"\bdui\b", re.IGNORECASE)
+_CLEAN_NOTE = re.compile(r"\bclean (?:record|driving|file)\b|\bno risks identified\b", re.IGNORECASE)
 
 
 def _as_int(value: Any) -> int:
@@ -152,6 +158,11 @@ def _file_has_dui(applicant: dict[str, Any], enrichment: dict[str, Any]) -> bool
     return "dui" in _violation_groups(applicant, enrichment)
 
 
+def _rejects_clean_note_on_high_score(score: float, note: str) -> None:
+    if band_for_score(score) == "high" and _CLEAN_NOTE.search(note):
+        raise ValueError("underwriter_note contradicts a high score")
+
+
 def _rejects_dui_when_absent(
     applicant: dict[str, Any],
     enrichment: dict[str, Any],
@@ -212,6 +223,7 @@ def risk_scoring_agent(
     if not isinstance(note, str) or not note.strip():
         raise ValueError("underwriter_note must be a non-empty string")
     factors = _model_factors(data.get("factors"))
+    _rejects_clean_note_on_high_score(score, note)
     _rejects_dui_when_absent(applicant, enrichment, factors)
     return {
         "score": score,
